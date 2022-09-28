@@ -87,8 +87,9 @@ def float_lat_lon(
         row_iter: Iterator[List[str]]
     ) -> Iterator[Point]:
     return (
-        Point(*map(float, pick_lat_lon(*row)))
-        for row in row_iter
+        # Point(*map(float, pick_lat_lon(*row)))
+        Point(longitude=float(row[0]), latitude=float(row[1]))
+    for row in row_iter
     )
 
 import codecs
