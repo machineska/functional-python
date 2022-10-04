@@ -94,7 +94,7 @@ import time
 from functools import reduce
 
 def performance():
-    with open("1000.txt") as source:
+    with open("../1000.txt") as source:
         primes = list(parse_g(source))
     assert len(primes) == 1000
 
@@ -203,7 +203,7 @@ __test__ = {
         """,
     "grouping_test":
         """
->>> with open("1000.txt") as source:
+>>> with open("../1000.txt") as source:
 ...     flat= list(parse_g(source))
 >>> len(flat)
 1000
